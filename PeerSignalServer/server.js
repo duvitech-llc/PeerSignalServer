@@ -172,8 +172,8 @@ listen(ios);
 
 // Signaling server only allowed to be connected with Socket.io.
 // If a client try to connect it with any other methods, server returns 405.
-/*app.get('*', function(req, res, next) {
+app.get('*', function(req, res, next) {
   res.send(405, 'WebRTC signaling server. Please connect it with Socket.IO.');
-});*/
+});
 
 console.info('Listening port: ' + config.port.plain + '/' + config.port.secured);
